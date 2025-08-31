@@ -1,11 +1,13 @@
 package ru.yandex.praktikum.products.model;
 
 import static ru.yandex.praktikum.products.model.constants.Colour.RED_APPLE;
+
 public abstract class Food implements Discountable {
     protected int amount;
     protected double price;
     protected boolean isVegetarian;
     String colour;
+
     @Override
     public double getDiscount() {
         return 0;

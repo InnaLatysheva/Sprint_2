@@ -4,6 +4,7 @@ import ru.yandex.praktikum.products.model.Food;
 
 public class ShoppingCart {
     private final Food[] foods;
+
     public ShoppingCart(Food[] foods) {
         this.foods = foods;
     }
@@ -15,6 +16,7 @@ public class ShoppingCart {
         }
         return totalPrice;
     }
+
     public double getTotalPriceWithDiscount() {
         double totalPriceWithDiscount = 0;
         for (Food food : foods) {

@@ -5,7 +5,8 @@ public class Meat extends Food {
     public double getDiscount() {
         return 0;
     }
-    public Meat (int amount, double price) {
+
+    public Meat(int amount, double price) {
         super(amount, price, false);
     }
 }

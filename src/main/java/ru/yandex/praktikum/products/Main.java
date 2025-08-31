@@ -4,8 +4,10 @@ import ru.yandex.praktikum.products.model.Apple;
 import ru.yandex.praktikum.products.model.Food;
 import ru.yandex.praktikum.products.model.Meat;
 import ru.yandex.praktikum.products.service.ShoppingCart;
+
 import static ru.yandex.praktikum.products.model.constants.Colour.RED_APPLE;
 import static ru.yandex.praktikum.products.model.constants.Colour.GREEN_APPLE;
+
 public class Main {
     public static void main(String[] args) {
 
