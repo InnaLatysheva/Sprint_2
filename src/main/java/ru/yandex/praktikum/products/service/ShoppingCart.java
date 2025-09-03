@@ -9,27 +9,34 @@ public class ShoppingCart {
         this.foods = foods;
     }
 
-    public double getTotalPrice() {
+    public double getTotalPriceWithoutDiscount() {
         double totalPrice = 0;
+
         for (Food food : foods) {
             totalPrice = totalPrice + food.getTotalPrice();
         }
+
         return totalPrice;
     }
 
+
     public double getTotalPriceWithDiscount() {
-        double totalPriceWithDiscount = 0;
+        double totalPrice = 0;
         for (Food food : foods) {
-            totalPriceWithDiscount = totalPriceWithDiscount + food.getTotalPriceWithDiscount();
+            totalPrice = totalPrice + food.getTotalPriceWithDiscount();
         }
-        return totalPriceWithDiscount;
+
+        return totalPrice;
     }
 
-    public double getTotalPriceIsVegetarian() {
-        double totalPriceIsVegetarian = 0;
+    public double getTotalVegetarianPriceWithoutDiscount() {
+        double vegetarianTotal = 0;
         for (Food food : foods) {
-            totalPriceIsVegetarian = totalPriceIsVegetarian + food.getTotalPriceIsVegetarian();
+            if (food.isVegetarian) {
+                vegetarianTotal = vegetarianTotal + food.getTotalPrice();
+            }
         }
-        return totalPriceIsVegetarian;
+
+        return vegetarianTotal;
     }
 }
